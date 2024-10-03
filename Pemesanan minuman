@@ -1,0 +1,26 @@
+#include<iostream>
+using namesapce std;
+
+int main() {
+
+  print("## Pembelian Minuman ##") 
+  print ("" 
+            List Menu:
+           1. Mineral Water         -8000
+           2. Ice Coffee            -15000
+           3. Soda                  -10000
+           4. Orange Juice          -12000
+ "") 
+ cout<<" Masukkan nomer minuman yang akan dipilih">> end]; 
+ cin>> Nomer minuman;
+ cout<< Masukkan nama anda">> end];
+ cin>> nama anda;
+
+ print(" Pesanan") 
+ print(f"Nama         : {nama} ") 
+ print(f"Nomor minuman: {nomer minuman} ") 
+
+print("\nThank you for your order\n")
+ 
+  
+  
