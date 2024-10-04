@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int pilihan;
+    string nama;
+
+    cout << "List Menu:\n";
+    cout << "1. Mineral Water         - 8000\n";
+    cout << "2. Ice Coffee            - 15000\n";
+    cout << "3. Soda                  - 10000\n";
+    cout << "4. Orange Juice          - 12000\n";
+
+    cout << "Masukkan nomor minuman yang akan dipilih: ";
+    cin >> pilihan;
+
+    cout << "Masukkan nama anda: ";
+    cin >> nama;
+
+    cout << "Pesanan:\n";
+    cout << "Nama         : " << nama << endl;
+    cout << "Nomor Pesanan: " << pilihan << endl;
+    cout << "Thank you for your order!" << endl;
+
+    return 0;
+}
