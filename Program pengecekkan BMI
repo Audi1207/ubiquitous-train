@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double berat, tinggi, bmi;
+
+    // Meminta input dari pengguna
+    cout << "Masukkan berat badan (kg): ";
+    cin >> berat;
+    cout << "Masukkan tinggi badan (cm): ";
+    cin >> tinggi;
+
+    // Menghitung BMI
+    bmi = berat / (tinggi * tinggi) * 10000;
+
+    // Menampilkan hasil BMI
+    cout << fixed << setprecision(2); // Mengatur presisi dua angka desimal
+    cout << "BMI Anda adalah: " << bmi << endl;
+
+    // Menentukan kategori BMI
+    if (bmi < 18.5) {
+        cout << "Kategori: Kekurangan berat badan" << endl;
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        cout << "Kategori: Berat badan normal" << endl;
+    } else if (bmi >= 25 && bmi < 29.9) {
+        cout << "Kategori: Kelebihan berat badan" << endl;
+    } else {
+        cout << "Kategori: Obesitas" << endl;
+    }
