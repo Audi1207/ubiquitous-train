@@ -1,0 +1,49 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() {
+    double berat, tinggi, bmi;
+    string jenisKelamin;
+
+    // Meminta input dari pengguna
+    cout << "Masukkan berat badan (kg): ";
+    cin >> berat;
+    cout << "Masukkan tinggi badan (cm): ";
+    cin >> tinggi;
+
+    // Meminta input jenis kelamin
+    cout << "Masukkan jenis kelamin (pria/wanita): ";
+    cin >> jenisKelamin;
+
+    // Menghitung BMI
+    bmi = berat / (tinggi * tinggi) * 10000;
+
+    // Menampilkan hasil BMI
+    cout << fixed << setprecision(2); // Mengatur presisi dua angka desimal
+    cout << "BMI Anda adalah: " << bmi << endl;
+
+    // Menentukan kategori BMI dan memberikan rekomendasi
+    if (bmi < 18.5) {
+        cout << "Kategori: Kekurangan berat badan" << endl;
+        if (jenisKelamin == "wanita") {
+            cout << "Rekomendasi: Meningkatkan asupan nutrisi." << endl;
+        }
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        cout << "Kategori: Berat badan normal" << endl;
+    } else if (bmi >= 25 && bmi < 29.9) {
+        cout << "Kategori: Kelebihan berat badan" << endl;
+        if (jenisKelamin == "pria") {
+            cout << "Rekomendasi: Disarankan untuk berolahraga." << endl;
+        }
+    } else {
+        cout << "Kategori: Obesitas" << endl;
+        if (jenisKelamin == "pria") {
+            cout << "Rekomendasi: Disarankan untuk berolahraga." << endl;
+        }
+    }
+
+    return 0; // Mengembalikan 0 menandakan program selesai dengan sukses
+}
